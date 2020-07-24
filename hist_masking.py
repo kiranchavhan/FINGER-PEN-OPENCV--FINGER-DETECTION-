@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+#reference:- https://github.com/amarlearning/Finger-Detection-and-Tracking
 def hist_masking(frame, hist):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     dst = cv2.calcBackProject([hsv], [0, 1], hist, [0, 180, 0, 256], 1)
