@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import hist_masking
 from matplotlib import *
+# reference:-https://github.com/amarlearning/Finger-Detection-and-Tracking
 def threshold(mask):
     """Thresholding into a binary mask"""
     grayMask = cv2.cvtColor(mask, cv2.COLOR_BGR2GRAY)
