@@ -9,5 +9,5 @@ def hand_histogram(frame,hand_rect_one_x,hand_rect_one_y,hand_rect_two_x,hand_re
         roi[i * 10: i * 10 + 10, 0: 10] = hsv_frame[hand_rect_one_x[i]:hand_rect_one_x[i] + 10,
                                           hand_rect_one_y[i]:hand_rect_one_y[i] + 10]
     print("k")
-    hand_hist = cv2.calcHist([roi], [0, 1], None, [180, 256], [0, 180, 0, 256])
+    hand_hist  = cv2.calcHist([roi], [0, 1], None, [180, 256], [0, 180, 0, 256])
     return cv2.normalize(hand_hist, hand_hist, 0, 255, cv2.NORM_MINMAX)
